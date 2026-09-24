@@ -1,0 +1,14 @@
+# Compiled Java binaries
+backend/java/bin/
+*.class
+
+# Python caches
+__pycache__/
+*.pyc
+
+# IDE configs
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

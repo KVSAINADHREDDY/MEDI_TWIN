@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediSphere &mdash; AI Healthcare Platform for Clinical Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <!-- Top Blue Brand Header (Signature Clinical Blue Banner) -->
+  <header class="top-brand-banner">
+    <div class="brand-left">
+      <div class="brand-logo-badge">MS</div>
+      <div class="brand-title">MediSphere</div>
+    </div>
+
+    <div class="brand-center-tagline">
+      <span>AI-Based Healthcare Platform for Clinical Operations</span>
+    </div>
+
+    <div class="brand-right-user">
+      <div class="status-pill">
+        <span class="pulse-dot"></span>
+        <span>Kafka Ingestion: 12K/s</span>
+      </div>
+      <div class="status-pill">
+        <span style="color:#38BDF8;">●</span>
+        <span>TFF Round 47 Synced</span>
+      </div>
+      <div class="clinician-badge">Dr. Meera Iyer &middot; Clinician</div>
+      <a class="logout-link" onclick="alert('Session authenticated under HIPAA OAuth2/SMART on FHIR standards.')">Logout</a>
+    </div>
+  </header>
+
+  <!-- App Body: Sidebar + Main Content Container -->
+  <div class="app-body">
+    <aside class="sidebar">
+      <div class="nav-group-title">Clinical Operations</div>
+      <nav class="nav-menu">
+        <button class="nav-item active" data-view="dashboard">
+          <span class="nav-icon">📊</span>
+          <span>Dashboard</span>
+        </button>
+        <button class="nav-item" data-view="patients">
+          <span class="nav-icon">🫀</span>
+          <span>Patients &amp; Twins</span>
+        </button>
+        <button class="nav-item" data-view="predictions">
+          <span class="nav-icon">⚡</span>
+          <span>AI Risk Prediction</span>
+        </button>
+        <button class="nav-item" data-view="alerts">
+          <span class="nav-icon">🚨</span>
+          <span>Surveillance &amp; Alerts</span>
+        </button>
+        <button class="nav-item" data-view="careplans">
+          <span class="nav-icon">🩺</span>
+          <span>Precision Careplans</span>
+        </button>
+      </nav>
+
+      <div class="nav-group-title">Enterprise Governance</div>
+      <nav class="nav-menu">
+        <button class="nav-item" data-view="population">
+          <span class="nav-icon">📈</span>
+          <span>Population Health</span>
+        </button>
+        <button class="nav-item" data-view="architecture">
+          <span class="nav-icon">🏛️</span>
+          <span>9-Layer Architecture</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="font-weight:600; color:#CBD5E1;">MediSphere Core v3.2</div>
+        <div class="tech-stack">Java 20 &middot; FHIR &middot; Kafka &middot; TFF</div>
+      </div>
+    </aside>
+
+    <main class="main-view-container" id="content-area">
+      <!-- Dynamic Clinical Views Render Here -->
+    </main>
+  </div>
+</div>
+
+<!-- Global Dynamic Modal Dialog Container -->
+<div id="global-modal" class="modal-overlay" style="display:none;" onclick="if(event.target===this) this.style.display='none'"></div>
+
+<!-- Scripts -->
+<script src="js/components/body_twin_3d.js"></script>
+<script src="js/components/ecg_monitor.js"></script>
+<script src="js/api.js"></script>
+<script src="js/views/dashboard.js"></script>
+<script src="js/views/patients.js"></script>
+<script src="js/views/predictions.js"></script>
+<script src="js/views/alerts.js"></script>
+<script src="js/views/careplans.js"></script>
+<script src="js/views/population.js"></script>
+<script src="js/views/architecture.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
